@@ -29,7 +29,7 @@ public class RegisterView extends VerticalLayout {
 
     private TextField usernameField = new TextField("New Username: ");
     private PasswordField passwordField = new PasswordField("New Password: ");
-    private PasswordField confirmPasswordField = new PasswordField("New Password: ");
+    private PasswordField confirmPasswordField = new PasswordField("Reenter New Password: ");
     private EmailField emailField = new EmailField("Email: ");
     private Button submitButton = new Button("Create Account");
     private Notification passwordNoMatchNotif = new Notification("Passwords don't match!", 2000);
@@ -42,7 +42,8 @@ public class RegisterView extends VerticalLayout {
         setJustifyContentMode(JustifyContentMode.CENTER);
         setAlignItems(Alignment.CENTER);
 
-        add(new H1("Register for Online Attendance System"), usernameField, emailField, passwordField, confirmPasswordField,  submitButton);
+        //add(new H1("Register for Online Attendance System"), usernameField, emailField, passwordField, confirmPasswordField,  submitButton);
+        add(new H1("Register for Online Attendance System"), usernameField, passwordField, confirmPasswordField,  submitButton);
 
         submitButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         submitButton.addClickShortcut(Key.ENTER);
